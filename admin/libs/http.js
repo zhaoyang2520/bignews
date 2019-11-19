@@ -22,6 +22,12 @@
         comment_delete:  baseURL + '/admin/comment/delete',//文章评论删除
     };
 
+
+
+
+
+
+    
     //暴露接口
     w.BigNew = BigNew;
 })(window);
