@@ -71,7 +71,7 @@
         </div>
       </div>
     </div>
-
+    <script src="./libs/http.js"></script>
     <script>
       //使用JQ来处理，先设置好入口函数
       $(function() {
@@ -98,7 +98,8 @@
           // 4.使用Ajax请求数据，页面渲染
           $.ajax({
             type: "post",
-            url: "http://localhost:8080/api/v1/admin/user/login",
+            // url: "http://localhost:8080/api/v1/admin/user/login",
+            url:window.BigNew.ser_login,
             //请求参数 字段
             data: {
               username: userName,
