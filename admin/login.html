@@ -111,9 +111,11 @@
               // console.log(res)
               //判断输入的账号密码是否正确
               if (res.code == 200) {
+                //令牌
+                window.localStorage.setItem('token',res.token)
                 // alert("登录成功");
-                $("#myModal").modal();
-                $(".modal-body").text(res.msg);
+                // $("#myModal").modal();
+                // $(".modal-body").text(res.msg);
                 //登录成功后 跳转到网站的首页  调用hidden.bs.modal JQ事件
                 $("#myModal").on("hidden.bs.modal", function(e) {
                   window.location.href = './index.html'

@@ -54,5 +54,36 @@
 
         </div>
     </div>
+    <script>
+        //用户登录成功之后，用Ajiax请求用户数据信息，将用户信息填充到对应页面
+        //1.jq的方法
+        $(function(){
+            $.ajax({
+                type:'get',
+                url:'http://localhost:8080/api/v1/admin/user/info',
+                //每次请求数据都要带上令牌，所以封装到JQ中
+                // headers:{Authorization:window.localStorage.getItem('token')},
+                success:function(res){
+                    console.log(res)
+                    //获取用户信息，渲染
+                    $('.uesr_info>img').attr('src',res.data.userPic)
+                    $('.user_info>span').html('欢迎&nbsb;&nbsb'+res.data.nickname)
+                    $('.user_center_link>img').attr('src',res.data.userPic)
+                }
+            })
+        })
+
+    // //2.原生的方法
+    //     var xhr = new XMLHttpRequest()
+    //     xhr.open('get','http://localhost:8080/api/v1/admin/user/info')
+    //     xhr.setRequestHeader('Authorization',window.localStorage.getItem('token'))
+    //     xhr,onreadystatechange = function(){
+    //         if(xhr.status == 200 && xhr.readyState == 4){
+    //             var res = JSON.parse(xhr.responseText)
+    //         }
+    //         console.log(res)
+    //     }
+    //     xhr.send()
+    </script>
 </body>
 </html>
