@@ -1,194 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>文章列表</title>
-    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/iconfont.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="./libs/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/main.css">
     <script src="./libs/jquery-1.12.4.min.js"></script>
-  </head>
 
-  <body>
+</head>
+
+<body>
     <div class="container-fluid">
-      <div class="common_title">
-        用户信息修改
-      </div>
-      <div class="container-fluid common_con">
-        <form class="form-horizontal article_form" id="form">
-          <div class="form-group">
-            <label for="inputEmail1" class="col-sm-2 control-label"
-              >用户名称：</label
-            >
-            <div class="col-sm-4">
-              <input
-                type="text"
-                name="username"
-                class="form-control username"
-                id="inputEmail1"
-                value="李思思"
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputEmail2" class="col-sm-2 control-label"
-              >昵称：</label
-            >
-            <div class="col-sm-4">
-              <input
-                type="text"
-                name="nickname"
-                class="form-control nickname"
-                id="inputEmail2"
-                value="哈哈思"
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label"
-              >邮箱：</label
-            >
-            <div class="col-sm-4">
-              <input
-                type="text"
-                name="email"
-                class="form-control email"
-                id="inputEmail3"
-                value="520@163.com"
-              />
-            </div>
-          </div>
+        <div class="common_title">
+            用户信息修改
+        </div>
+        <div class="container-fluid common_con">
+            <form class="form-horizontal article_form" id="form">
+                <div class="form-group">
+                    <label for="inputEmail1" class="col-sm-2 control-label">用户名称：</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="username" class="form-control username" id="inputEmail1" value="李思思">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail2" class="col-sm-2 control-label">昵称：</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="nickname" class="form-control nickname" id="inputEmail2" value="哈哈思">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail3" class="col-sm-2 control-label">邮箱：</label>
+                    <div class="col-sm-4">
+                        <input type="text" name="email" class="form-control email" id="inputEmail3" value="520@163.com">
+                    </div>
+                </div>
 
-          <div class="form-group">
-            <label for="inputPassword3" class="col-sm-2 control-label"
-              >用户图标：</label
-            >
-            <div class="col-sm-10">
-              <img src="images/2.jpg" alt="" class="user_pic" />
-              <!-- 因为 label已经关联到了，所以就算隐藏还是能点击到这个范围-->
-              <input
-                style="display: none"
-                name="userPic"
-                type="file"
-                id="exampleInputFile"
-              />
-              <!-- 给label标签的for属性赋值,值是input标签的id,那这样的话点击label就相当于点击了input -->
-              <br />
-              <label for="exampleInputFile">
-                <img
-                  src="./images/uploads_icon.jpg"
-                  style="height: 50px;"
-                  alt=""
-                />
-              </label>
-            </div>
-          </div>
+                <div class="form-group">
+                    <label for="inputPassword3" class="col-sm-2 control-label">用户图标：</label>
+                    <div class="col-sm-10">
+                        <img src="images/2.jpg" alt="" class="user_pic">
+                        <input style="display: none" name="userPic" type="file" id="exampleInputFile">
+                        <!-- 给label标签的for属性赋值,值是input标签的id,那这样的话点击label就相当于点击了input -->
+                        <br>
+                        <label for="exampleInputFile">
+                            <img src="./images/uploads_icon.jpg" style="height: 50px;" alt="">
+                        </label>
+                    </div>
+                </div>
 
-          <div class="form-group">
-            <label for="inputEmail4" class="col-sm-2 control-label"
-              >密码：</label
-            >
-            <div class="col-sm-4">
-              <input
-                type="password"
-                name="password"
-                class="form-control password"
-                id="inputEmail4"
-                value="12345678"
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" class="btn btn-success btn-edit">
-                修改
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
+                <div class="form-group">
+                    <label for="inputEmail4" class="col-sm-2 control-label">密码：</label>
+                    <div class="col-sm-4">
+                        <input type="password" name="password" class="form-control password" id="inputEmail4"
+                            value="12345678">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-success btn-edit">修改</button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
+
+
+    
     <script src="./libs/http.js"></script>
 
     <script>
-      $(function() {
-        // 当用户点击跳转到用户页面的时候，就应该将用户的信息获取，填充到表单中
-        $.get({
-          url: BigNew.user_detail,
-          success: function(res) {
-            // console.log(res)
-            if (res.code == 200) {
-              // $('input.username').val(res.data.username)
-              // $('inpeut.nickname').val(res.data.nickname)
-              // $('input.password').val(res.data.password)
-              // $('input.email').val(res.data.email)
-              // 优化遍历
-              for (var key in res.data) {
-                $("input." + key).val(res.data[data]);
-              }
-              //attr设置或返回被选中的元素
-              $(".user_pic").attr("src", res.data.userPic);
-            }
-          }
-        });
+        $(function () {
+            // 当用户点击跳转到用户页面的时候，就应该将用户的信息获取，填充到表单中
+            $.get({
+                url: BigNew.user_detail,
+                success: function (res) {
+                    // console.log(res);
+                    // 当数据获取成功，渲染在页面上
+                    if (res.code == 200) {
+                        // $('input.username').val(res.data.username);
+                        // $('input.nickname').val(res.data.nickname);
+                        // $('input.email').val(res.data.email);
+                        // $('input.password').val(res.data.password);
+                        //因为数据中的字段名和表单中的每个表单元素的类名是相同的，所以我们可以这么处理
+                        for (var key in res.data) {
+                            // console.log(key);
+                            // console.log(key+'------'+res.data[key]);
+                            $('input.' + key).val(res.data[key]);
+                        }
 
-        //给文件域按钮注册一个change事件，当选择好图片之后，在页面显示预览效果
-        $("#exampleInputFile").on("change", function() {
-          // console.log(this.files[0];
-          //将选择的图片转换成一个url地址
-          var imgIcon = this.files[0];
-          //window上有一个URL对象，在这个对象中有一个createObjectURL，将图片的信息转换为url地址
-          var url = URL.createObjectURL(imgIcon);
-          // console.log(url);
-          //将这个地址设置给img的src属性
-          $(".user_pic").attr("src", url);
-        });
-
-        // 给修改的按钮注册点击事件
-        $("btn.btn-edit").on("click", function(e) {
-          //给submit阻止默认行为
-          e.preventDefauly();
-          //当点击的时候获取用户信息 表单信息
-          //formDate 只能处理 原生对象
-          var form = $("#form")[0];
-          var userDate = new FormData(form);
-          $.post({
-            url: BigNew.user_edit,
-            data: userDate,
-            //因为传进的是二进制数据，所以不需要设置请求类型
-            contentType: false,
-            //不需要进行编码
-            processData: false,
-            success: function(res) {
-                //判断成功
-              if (res.code == 200) {
-                //1.3在子页面获取到父页面的元素
-                $.ajax({
-                type:'get',
-                // url:'http://localhost:8080/api/v1/admin/user/info',
-                url:window.BigNew.user_info,
-                //每次请求数据都要带上令牌，所以封装到JQ中
-                // headers:{Authorization:window.localStorage.getItem('token')},
-                success:function(res){
-                    console.log(res)
-                    //获取用户信息，渲染
-                    parent.$('.uesr_info>img').attr('src',res.data.userPic)
-                    parent.$('.user_info>span').html('欢迎&nbsp;&nbsp;'+res.data.nickname)
-                    parent.$('.user_center_link>img').attr('src',res.data.userPic)
-                // 1.1刷新子页面
-                window.location.reload();
-                // 1.2在子页面中刷新父页面
-                // parent.window.location.reload();
+                        $('.user_pic').attr('src', res.data.userPic);
+                    }
                 }
             })
-              }
-            }
-          });
-        });
-      });
+
+            //给文件域按钮注册一个change事件，当选择好图片之后，在页面显示预览效果
+            $('#exampleInputFile').on('change', function () {
+                // console.log(this.files[0];
+                //将选择的图片转换成一个url地址
+                var imgIcon = this.files[0];
+                //window上右一个URL对象，在这个对象中有一个createObjectURL，将图片的信息转换为url地址
+                var url = URL.createObjectURL(imgIcon);
+                // console.log(url);
+                //将这个地址设置给img的src属性
+                $('.user_pic').attr('src', url);
+            })
+
+            // 给修改的按钮注册点击事件
+            $('button.btn-edit').on('click', function (e) {
+                //阻止默认行为
+                e.preventDefault();
+                //获取表单信息
+                // 获取form表单 formData只能处理原生的DOM对象
+                var form = $('#form')[0];
+                var userData = new FormData(form);
+                //发送ajax请求提交数据
+                $.post({
+                    url: BigNew.user_edit,
+                    data: userData,
+                    //不需要设置请求类型
+                    contentType: false,
+                    //不需要进行编码
+                    processData: false,
+                    success: function (res) {
+                        // console.log(res);
+                        if (res.code == 200) {
+                            //刷新子页面
+                            // window.location.reload();
+                            //在子页面中刷新父页面
+                            // parent.window.location.reload();
+
+                            $.ajax({
+                                type: 'get',
+                                url: window.BigNew.user_info,
+                                success: function (res) {
+                                    //获取到返回的用户信息，在页面渲染
+                                    // parent在子页面获取到父页面的元素
+                                    parent.$('.user_info>img').attr('src', res.data.userPic);
+                                    parent.$('.user_info>span').html('欢迎&nbsp;&nbsp;' + res.data.nickname);
+                                    parent.$('.user_center_link>img').attr('src', res.data.userPic)
+
+                                    //刷新子页面
+                                    window.location.reload();
+                                }
+                            })
+                        }
+                    }
+                })
+            })
+
+        })
     </script>
-  </body>
+</body>
+
 </html>
