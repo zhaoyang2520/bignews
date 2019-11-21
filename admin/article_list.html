@@ -72,6 +72,32 @@
             </div>
         </div>
     </div>
+    <script src="./libs/http.js"></script>
+    <!-- 文章分类的显示模板 -->
+    <script type="text/html" id="list">
+        <option value="">所有分类</option>
+        {{each data}}
+        <option>{{$value.name}}</option>
+        {{/each}}
+    </script>
+    <script>
+    $(function(){
+        // 当列表页面一加载就显示分类中的数据
+        $.get({
+            url:BigNew.category_list,
+            success:function(res){
+                // console.log(res)
+                var htmlStr =  template('list',res)
+                // console.log(htmlStr)
+                $('#selCategory').html(htmlStr)
+
+            }
+        })
+    })
+
+
+
+    </script>
 </body>
 
 </html>
